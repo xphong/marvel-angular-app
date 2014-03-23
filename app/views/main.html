@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1>It's Mahvel Baby!</h1>
+</div>
+
+<div class="row marvel">
+  <div ng-switch="searchChar">
+  <div id="form-control" class="col-xs-12">
+    <form ng-submit="processForm()">
+      <label>Character Name</label>
+      <input type="text" class="form-control" placeholder="Spider-Man" ng-model="formData.name" required>
+      <div ng-switch-when="fail">
+        <span class="help-block">{{ errorMsg }}</span>
+      </div>
+      <button type="submit" class="go-btn btn btn-lg btn-success btn-block">Search</button>
+    </form>
+  </div>
+    <div ng-switch-when="success">
+      <div class="character-info row" ng-repeat="character in characters">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="{{ character.url }}" target="_blank" title="{{ character.name }}"><img ng-src="{{ character.image }}" alt="{{ character.name }}" class="img-responsive img-thumbnail"></a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <h4>Name:</h4><p>{{ character.name }}</p>
+          <h4>Description:</h4><p>{{ character.description }}</p>
+          <a href="{{ character.url }}" target="_blank" title="More Info">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
