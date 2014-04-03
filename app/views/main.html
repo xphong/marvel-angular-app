@@ -6,8 +6,7 @@
   <div ng-switch="searchChar">
   <div id="form-control" class="col-xs-12">
     <form ng-submit="processForm()">
-      <label>Character Name</label>
-      <input type="text" class="form-control" placeholder="Spider-Man" ng-model="formData.name" required>
+      <input type="text" class="form-control" placeholder="Character Name" ng-model="formData.name" required>
       <div ng-switch-when="fail">
         <span class="help-block">{{ errorMsg }}</span>
       </div>
