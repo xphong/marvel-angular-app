@@ -23,4 +23,4 @@ grunt
 
 ## TODO
 - Animations
-- Directives
+- Integrate comic books
