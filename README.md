@@ -23,3 +23,4 @@ grunt
 
 ## TODO
 - Integrate comic books
+- Better routing
