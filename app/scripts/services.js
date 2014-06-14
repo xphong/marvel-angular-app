@@ -6,8 +6,8 @@ angular.module('app.services', [])
     var apiUrl = 'http://gateway.marvel.com/v1/public/';
     var apiKey = 'yourPublicKey';
 
-    // limit to top 5 results
-    var limit = 5;
+    // limit to top 10 results
+    var limit = 10;
 
     var getChar = function(character) {
       var def = $q.defer();

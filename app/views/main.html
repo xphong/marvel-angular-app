@@ -13,8 +13,8 @@
       <button type="submit" class="go-btn btn btn-lg btn-success btn-block">Search</button>
     </form>
   </div>
-    <div ng-switch-when="success">
-      <div class="character-info row" ng-repeat="character in characters">
+    <div ng-switch-when="success" class="reveal-animation">
+      <div class="character-info row reveal-animation" ng-repeat="character in characters">
         <div class="col-xs-12 col-sm-6 col-md-4">
           <a href="{{ character.url }}" target="_blank" title="{{ character.name }}"><img ng-src="{{ character.image }}" alt="{{ character.name }}" class="img-responsive img-thumbnail"></a>
         </div>

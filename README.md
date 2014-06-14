@@ -2,7 +2,7 @@ marvel-angular-app
 ==================
 
 AngularJS + Marvel API
-- Searches the Marvel database for the inputted character text and returns the top 5 results
+- Searches the Marvel database for the inputted character text and returns the top 10 results
 
 [View Demo](http://marvel.phonghuynh.ca)
 
@@ -22,5 +22,4 @@ grunt
 ```
 
 ## TODO
-- Animations
 - Integrate comic books

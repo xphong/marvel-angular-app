@@ -2,6 +2,7 @@
 
 angular.module('marvelApp', [
   'ngRoute',
+  'ngAnimate',
   'app.services',
   'app.controllers'
 ])
