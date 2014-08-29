@@ -2,11 +2,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-$salmon: #d9534f;
-$salmon-bdr: #d43f3a;
-$salmon-hvr: #d2322d;
-$salmon-hvr-bdr: #ac2925;
-
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -15,40 +10,11 @@ $salmon-hvr-bdr: #ac2925;
 }
 
 .header {
+  margin-bottom: 0;
   .navbar {
     border-radius: 0;
-  }
-  .navbar-inverse {
-    background: $salmon;
-    border-color: $salmon-bdr;
     .navbar-brand {
-      color: #fff;
-      &:hover {
-        color: #e5e5e5;
-      }
-    }
-    li > a {
-      color: #fff;
-      &:hover {
-        background: $salmon-hvr;
-        border-color: $salmon-hvr-bdr;
-      }
-    }
-    .active > a {
-      background: $salmon-hvr;
-      &:hover {
-        background: $salmon-hvr;
-        border-color: $salmon-hvr-bdr;
-      }
-    }
-    .navbar-collapse {
-      border: none;
-    }
-    .navbar-toggle {
-      border-color: $salmon-hvr-bdr;
-      &:hover, &:focus {
-        background: $salmon-hvr;
-      }
+      color: #FFF;
     }
   }
 }
@@ -67,22 +33,32 @@ $salmon-hvr-bdr: #ac2925;
 }
 
 .container {
-  padding-bottom: 31px;
-  .jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-  }
   .marvel {
     margin: 40px 0;
+    .form-area {
+      text-align: center;
+    }
+    .form-control {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 0;
+    }
     .go-btn {
+      margin: 15px auto 50px auto;
+      width: 100%;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 4px 0;
+    }
+    .help-block {
       margin-top: 15px;
-      margin-bottom: 50px;
     }
     .character-info {
       margin-bottom: 30px;
       img {
         width: 100%;
         height: auto;
+        border-radius: 0;
       }
     }
   }
@@ -165,19 +141,19 @@ $salmon-hvr-bdr: #ac2925;
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .header {
-    margin-bottom: 30px;
-  }
   .container {
-    .jumbotron {
-      border-bottom: 0;
-    }
     .marvel {
       .character-info {
         img {
           width: 350px;
           margin-right: 30px;
         }
+      }
+      .go-btn {
+        width: 10%;
+      }
+      .form-control {
+        width: 40%
       }
     }
   }

@@ -4,7 +4,7 @@ angular.module('app.services', [])
 
   .factory('MarvelAPI', ['$http', '$q', function($http, $q) {
     var apiUrl = 'http://gateway.marvel.com/v1/public/';
-    var apiKey = 'yourPublicKey';
+    var apiKey = '0b72980a074358f7c6565bd7efc480ca';
 
     // limit to top 10 results
     var limit = 10;
@@ -12,7 +12,23 @@ angular.module('app.services', [])
     var getChar = function(character) {
       var def = $q.defer();
       var url = apiUrl + 'characters?limit=' + limit + '&nameStartsWith=' + character + '&apikey=' + apiKey;
-      $http.get(url).success(def.resolve).error(def.reject);
+      $http.get(url)
+        .success(function (response) {
+          if (response.data.results.length > 0) {
+            def.resolve({
+              characters: response.data.results
+            });
+          }
+          else {
+            def.reject({
+              message: 'Unable to find that character'
+            });
+          }
+        }).error(function () {
+          def.reject({
+            message: 'API error'
+          });
+        });
 
       return def.promise;
     };

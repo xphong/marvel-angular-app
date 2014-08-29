@@ -1,18 +1,14 @@
-<div class="jumbotron">
-  <h1>It's Mahvel Baby!</h1>
-</div>
-
 <div class="row marvel">
   <div ng-switch="searchChar">
-  <div id="form-control" class="col-xs-12">
-    <form ng-submit="processForm()">
-      <input type="text" class="form-control" placeholder="Character Name" ng-model="formData.name" required>
-      <div ng-switch-when="fail">
-        <span class="help-block">{{ errorMsg }}</span>
-      </div>
-      <button type="submit" class="go-btn btn btn-lg btn-success btn-block">Search</button>
-    </form>
-  </div>
+    <div id="form-control" class="col-xs-12 form-area">
+      <form ng-submit="processForm()">
+        <input type="text" class="form-control" placeholder="Character Name" ng-model="formData.name" required>
+        <div ng-switch-when="fail">
+          <span class="help-block">{{ errorMsg }}</span>
+        </div>
+        <button type="submit" class="go-btn btn btn-lg btn-success btn-block">Search</button>
+      </form>
+    </div>
     <div ng-switch-when="success" class="reveal-animation">
       <div class="character-info row reveal-animation" ng-repeat="character in characters">
         <div class="col-xs-12 col-sm-6 col-md-4">
