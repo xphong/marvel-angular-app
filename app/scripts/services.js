@@ -4,7 +4,7 @@ angular.module('app.services', [])
 
   .factory('MarvelAPI', ['$http', '$q', function($http, $q) {
     var apiUrl = 'http://gateway.marvel.com/v1/public/';
-    var apiKey = '0b72980a074358f7c6565bd7efc480ca';
+    var apiKey = 'yourPublicKey';
 
     // limit to top 10 results
     var limit = 10;
